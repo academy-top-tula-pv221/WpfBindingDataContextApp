@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfBindingDataContextApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfBindingDataContextApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" x:Name="mainWindow">
+    <Window.Resources>
+        <!--<local:Employee x:Key="employee" Name="Leo" Age="33"/>-->
+    </Window.Resources>
+    <Grid>
+        <StackPanel Width="200">
+            <TextBlock>Name:</TextBlock>
+            <TextBox Text="{Binding Name, Mode=TwoWay}"/>
+            <TextBlock>Age:</TextBlock>
+            <TextBox Text="{Binding Age, Mode=TwoWay}"/>
+            <Button Content="Change" Click="Button_Click"/>
+            <Button Content="Show" Click="Button_Click_1"/>
+
+            <!--<TextBlock Text="Name"/>
+            <TextBox Text="{Binding ElementName=mainWindow, Path=Employee.Name}"/>
+            --><!--<TextBlock>Company:</TextBlock>
+            <TextBox Text="{Binding ElementName=mainWindow, Path=Employee.Company.Title}"/>--><!--
+            <TextBlock>Age:</TextBlock>
+            <TextBox Text="{Binding ElementName=mainWindow, Path=Employee.Age}"/>-->
+            <!--<TextBlock>Name:</TextBlock>
+            <TextBox Text="{Binding Path=Name}"/>
+            <TextBlock>Company:</TextBlock>
+            <TextBox DataContext="{Binding Path=Company}" Text="{Binding Path=Title}"/>
+            <TextBox Text="{Binding Path=Company.Title}"/>
+            <TextBlock>Age:</TextBlock>
+            <TextBox Text="{Binding Path=Age}"/>-->
+        </StackPanel>
+    </Grid>
+</Window>
